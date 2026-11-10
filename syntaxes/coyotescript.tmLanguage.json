@@ -1,0 +1,71 @@
+{
+  "name": "CoyoteScript",
+  "scopeName": "source.coyotescript",
+  "patterns": [
+    {
+      "name": "comment.line.double-slash.coyotescript",
+      "match": "//.*$"
+    },
+    {
+      "name": "string.quoted.double.coyotescript",
+      "begin": "\"",
+      "end": "\"|$",
+      "patterns": [
+        {
+          "name": "variable.other.coyotescript",
+          "match": "[$%][A-Za-z_][A-Za-z0-9_]*"
+        }
+      ]
+    },
+    {
+      "match": "(?i)^\\s*(script)\\s+([A-Za-z_][A-Za-z0-9_]*)",
+      "captures": {
+        "1": {
+          "name": "keyword.control.coyotescript"
+        },
+        "2": {
+          "name": "entity.name.function.coyotescript"
+        }
+      }
+    },
+    {
+      "match": "(?i)^\\s*(event)\\s+(configchanged|key|midi|osc|process|scriptsloaded|shutdown|startup|sysex|time|uirefreshed|uri|windowchanged|windowssession)\\b",
+      "captures": {
+        "1": {
+          "name": "keyword.control.coyotescript"
+        },
+        "2": {
+          "name": "entity.name.tag.coyotescript"
+        }
+      }
+    },
+    {
+      "name": "keyword.control.coyotescript",
+      "match": "(?i)\\b(event|script|if|else|repeat|foreach|while|switch|case|return)\\b"
+    },
+    {
+      "name": "support.function.coyotescript",
+      "match": "(?i)(?:^\\s*|(?<=\\()\\s*)\\b(?:abs|after|animatetranslation|audiooutputdevices|base64|before|cancel|case|ceiling|checkbox|click|clipboard|combinepath|combobox|configurationparameter|cooldown|copyfile|copyfolder|cos|count|createfolder|date|decrypt|deletefile|deletefolder|else|encrypt|endswith|enforcetrigger|error|fileexists|find|findprocesses|floor|folderexists|foreach|getfiles|getfocusedprocess|getfolders|getmodifierfolders|getmodifiers|getmouse|getmute|getpixel|getprocess|getrecordingvolume|getselectedtranslationprofile|gettranslationfolders|gettranslationprofiles|gettranslations|getvolume|guid|hash|heldnotes|hex|httpencode|hubscript|if|indicator|inputdevices|inputwindow|isnumber|isprocessfocused|isprocessrunning|key|keystate|killprocess|log|lowercase|mapkeys|mapvalues|max|messagebox|midi|min|mod|modifieractive|modifierfolderactive|movefile|movefolder|movemouse|notename|notenumber|numberbox|osc|outputdevices|parsedate|parsejson|platform|playsound|print|processname|random|repeat|replace|rest|return|round|runscript|save|saverecording|scriptcontext|scroll|searchimage|searchpixel|selectedtranslationprofile|setclipboard|setfocusedprocess|setmute|setrecordingenabled|setrecordingvolume|setvolume|sin|sort|specialfolder|split|startprocess|startswith|stopsound|switch|sysex|tan|textblock|textbox|time|titlecase|tojson|translationactive|translationfolderactive|translationparameter|trim|uppercase|wait|web|while|write|writefile)\\b"
+    },
+    {
+      "name": "variable.other.coyotescript",
+      "match": "[$%][A-Za-z_][A-Za-z0-9_]*"
+    },
+    {
+      "name": "constant.language.coyotescript",
+      "match": "(?i)\\b(true|false|public|private|hidden)\\b"
+    },
+    {
+      "name": "constant.numeric.coyotescript",
+      "match": "(?<![\\w$%])-?\\b\\d+(?:\\.\\d+)?\\b"
+    },
+    {
+      "name": "keyword.operator.coyotescript",
+      "match": "!contains\\b|\\b(contains|add|remove|include|exclude|new|in)\\b|==|!=|>=|<=|&&|\\|\\||\\+>|->|[=+*/<>!\\-]"
+    },
+    {
+      "name": "punctuation.section.parens.coyotescript",
+      "match": "[()]"
+    }
+  ]
+}

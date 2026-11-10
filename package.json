@@ -1,0 +1,75 @@
+{
+  "name": "coyotescript",
+  "displayName": "CoyoteScript",
+  "description": "Unofficial CoyoteScript language support for CoyoteMIDI: linting, IntelliSense, and navigation.",
+  "version": "0.1.0",
+  "publisher": "skyhoshi",
+  "license": "GPL-3.0-only",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/skyhoshi/vscode-coyotescript-extension.git"
+  },
+  "engines": { "vscode": "^1.96.0" },
+  "categories": ["Programming Languages", "Linters"],
+  "keywords": ["coyotescript", "coyotemidi", "midi"],
+  "main": "./dist/extension.js",
+  "scripts": {
+    "build": "tsc -p .",
+    "watch": "tsc -watch -p .",
+    "test": "npm run build && node --test test/core.test.cjs",
+    "test:integration": "npm run build && node test/run-extension.cjs",
+    "catalog:update": "node scripts/update-catalog.mjs",
+    "vscode:prepublish": "npm run build",
+    "package": "vsce package"
+  },
+  "contributes": {
+    "languages": [{
+      "id": "coyotescript",
+      "aliases": ["CoyoteScript", "coyotescript"],
+      "extensions": [".cy", ".coyote", ".coyotescript"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "coyotescript",
+      "scopeName": "source.coyotescript",
+      "path": "./syntaxes/coyotescript.tmLanguage.json"
+    }],
+    "snippets": [{ "language": "coyotescript", "path": "./snippets/coyotescript.json" }],
+    "configuration": {
+      "title": "CoyoteScript",
+      "properties": {
+        "coyotescript.lint.enabled": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable CoyoteScript diagnostics."
+        },
+        "coyotescript.lint.unknownCommands": {
+          "type": "boolean",
+          "default": true,
+          "description": "Warn about commands or events absent from the bundled reference. Disable for newer CoyoteMIDI versions."
+        }
+      }
+    },
+    "configurationDefaults": {
+      "[coyotescript]": {
+        "editor.tabSize": 4,
+        "editor.insertSpaces": true,
+        "editor.detectIndentation": false
+      }
+    }
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "@types/vscode": "~1.96.0",
+    "@vscode/test-electron": "^2.5.0",
+    "@vscode/vsce": "^4.1.0",
+    "typescript": "^5.7.0",
+    "vscode-oniguruma": "^2.0.1",
+    "vscode-textmate": "^9.3.0"
+  },
+  "overrides": {
+    "@vscode/vsce": {
+      "minimatch": "^11.0.5"
+    }
+  }
+}

@@ -1,0 +1,763 @@
+{
+  "source": "https://update.coyotemidi.com/?request=scriptdocs",
+  "retrieved": "2026-11-09",
+  "commands": [
+    {
+      "name": "abs",
+      "syntax": "abs [<number>]",
+      "category": "Math"
+    },
+    {
+      "name": "after",
+      "syntax": "after [<search>] [<full string>]",
+      "category": "String"
+    },
+    {
+      "name": "animatetranslation",
+      "syntax": "animatetranslation [<translation ID>]",
+      "category": "Translations"
+    },
+    {
+      "name": "audiooutputdevices",
+      "syntax": "audiooutputdevices",
+      "category": "Audio"
+    },
+    {
+      "name": "base64",
+      "syntax": "base64 [<input>]",
+      "category": "String"
+    },
+    {
+      "name": "before",
+      "syntax": "before [<search>] [<full string>]",
+      "category": "String"
+    },
+    {
+      "name": "cancel",
+      "syntax": "cancel (<script name>) (<subscript name>)",
+      "category": "Script"
+    },
+    {
+      "name": "case",
+      "syntax": "case [<value>/default(, <value>, ...)]",
+      "category": "Logic"
+    },
+    {
+      "name": "ceiling",
+      "syntax": "ceiling [<#.#>]",
+      "category": "Math"
+    },
+    {
+      "name": "checkbox",
+      "syntax": "checkbox [<name>] [<description>] (<default value>)",
+      "category": "UI"
+    },
+    {
+      "name": "click",
+      "syntax": "click (left/right/middle) (<x>,<y>) (up/down/stroke) (<duration>)",
+      "category": "InputSimulation"
+    },
+    {
+      "name": "clipboard",
+      "syntax": "clipboard",
+      "category": "InputSimulation"
+    },
+    {
+      "name": "combinepath",
+      "syntax": "combinepath [<folder or file name>(,?)]",
+      "category": "File"
+    },
+    {
+      "name": "combobox",
+      "syntax": "combobox [<name>] [<description>] [<options>] (<default value>) (<width>)",
+      "category": "UI"
+    },
+    {
+      "name": "configurationparameter",
+      "syntax": "configurationparameter [<id>] [<control>]",
+      "category": "UI"
+    },
+    {
+      "name": "cooldown",
+      "syntax": "cooldown (<#.#>) (<return>)",
+      "category": "Script"
+    },
+    {
+      "name": "copyfile",
+      "syntax": "copyfile [<source file>] [<destination file>] (<should overwrite?>)",
+      "category": "File"
+    },
+    {
+      "name": "copyfolder",
+      "syntax": "copyfolder [<source folder>] [<destination path>] (<should overwrite contents?>)",
+      "category": "File"
+    },
+    {
+      "name": "cos",
+      "syntax": "cos [<#.#>]",
+      "category": "Math"
+    },
+    {
+      "name": "count",
+      "syntax": "count [<list/map/string>]",
+      "category": "Collection"
+    },
+    {
+      "name": "createfolder",
+      "syntax": "createfolder [<folder path>]",
+      "category": "File"
+    },
+    {
+      "name": "date",
+      "syntax": "date [<timestamp in seconds>] (<format>) (UTC?)",
+      "category": "Time"
+    },
+    {
+      "name": "decrypt",
+      "syntax": "decrypt [<string>] (<key>)",
+      "category": "Cryptography"
+    },
+    {
+      "name": "deletefile",
+      "syntax": "deletefile [<file path>] (<move to recycle bin?>)",
+      "category": "File"
+    },
+    {
+      "name": "deletefolder",
+      "syntax": "deletefolder [<folder path>] (<move to recycle bin?>)",
+      "category": "File"
+    },
+    {
+      "name": "else",
+      "syntax": "else (if) (<value>) (<operator>) (<value>) (&&/||) (?)",
+      "category": "Logic"
+    },
+    {
+      "name": "encrypt",
+      "syntax": "encrypt [<string>] (<key>)",
+      "category": "Cryptography"
+    },
+    {
+      "name": "endswith",
+      "syntax": "endswith [<end>] [<full string>]",
+      "category": "String"
+    },
+    {
+      "name": "enforcetrigger",
+      "syntax": "enforcetrigger [<trigger type>,...]",
+      "category": "Core"
+    },
+    {
+      "name": "error",
+      "syntax": "error (<message>)",
+      "category": "Script"
+    },
+    {
+      "name": "fileexists",
+      "syntax": "fileexists [<file path>]",
+      "category": "File"
+    },
+    {
+      "name": "find",
+      "syntax": "find [<list/string>] [<item/string>]",
+      "category": "Collection"
+    },
+    {
+      "name": "findprocesses",
+      "syntax": "findprocesses [<process name>]",
+      "category": "Process"
+    },
+    {
+      "name": "floor",
+      "syntax": "floor [<#.#>]",
+      "category": "Math"
+    },
+    {
+      "name": "folderexists",
+      "syntax": "folderexists [<folder path>]",
+      "category": "File"
+    },
+    {
+      "name": "foreach",
+      "syntax": "foreach [<variable>(:<variable>)] [in] [<list>/<map>]",
+      "category": "Logic"
+    },
+    {
+      "name": "getfiles",
+      "syntax": "getfiles [<path>]",
+      "category": "File"
+    },
+    {
+      "name": "getfocusedprocess",
+      "syntax": "getfocusedprocess",
+      "category": "Process"
+    },
+    {
+      "name": "getfolders",
+      "syntax": "getfolders [<path>]",
+      "category": "File"
+    },
+    {
+      "name": "getmodifierfolders",
+      "syntax": "getmodifierfolders",
+      "category": "Modifiers"
+    },
+    {
+      "name": "getmodifiers",
+      "syntax": "getmodifiers",
+      "category": "Modifiers"
+    },
+    {
+      "name": "getmouse",
+      "syntax": "getmouse",
+      "category": "InputSimulation"
+    },
+    {
+      "name": "getmute",
+      "syntax": "getmute (<process ID>/<process name>) (audio device)",
+      "category": "Audio"
+    },
+    {
+      "name": "getpixel",
+      "syntax": "getpixel [<x>,<y>]",
+      "category": "Graphics"
+    },
+    {
+      "name": "getprocess",
+      "syntax": "getprocess [<process name>]",
+      "category": "Process"
+    },
+    {
+      "name": "getrecordingvolume",
+      "syntax": "getrecordingvolume",
+      "category": "MIDI"
+    },
+    {
+      "name": "getselectedtranslationprofile",
+      "syntax": "getselectedtranslationprofile",
+      "category": "Translations"
+    },
+    {
+      "name": "gettranslationfolders",
+      "syntax": "gettranslationfolders",
+      "category": "Translations"
+    },
+    {
+      "name": "gettranslationprofiles",
+      "syntax": "gettranslationprofiles",
+      "category": "Translations"
+    },
+    {
+      "name": "gettranslations",
+      "syntax": "gettranslations",
+      "category": "Translations"
+    },
+    {
+      "name": "getvolume",
+      "syntax": "getvolume (<process ID>/<process name>) (<audio device>)",
+      "category": "Audio"
+    },
+    {
+      "name": "guid",
+      "syntax": "guid (<hyphenate?>)",
+      "category": "Core"
+    },
+    {
+      "name": "hash",
+      "syntax": "hash [<input>]",
+      "category": "Cryptography"
+    },
+    {
+      "name": "heldnotes",
+      "syntax": "heldnotes (<include sustain?>)",
+      "category": "MIDI"
+    },
+    {
+      "name": "hex",
+      "syntax": "hex [<input>]",
+      "category": "String"
+    },
+    {
+      "name": "httpencode",
+      "syntax": "httpencode [<input>]",
+      "category": "Web"
+    },
+    {
+      "name": "hubscript",
+      "syntax": "hubscript [<script ID>] (<property>)",
+      "category": "Script"
+    },
+    {
+      "name": "if",
+      "syntax": "if [<value>] (<operator>) (<value>) (&&/||) (?)",
+      "category": "Logic"
+    },
+    {
+      "name": "indicator",
+      "syntax": "indicator [true/false] (R:<#>,G:<#>,B:<#>) (<duration>) (<layer>)",
+      "category": "UI"
+    },
+    {
+      "name": "inputdevices",
+      "syntax": "inputdevices (<selected only?>)",
+      "category": "MIDI"
+    },
+    {
+      "name": "inputwindow",
+      "syntax": "inputwindow [<title>] [<id>:<control>,...] (<position>)",
+      "category": "UI"
+    },
+    {
+      "name": "isnumber",
+      "syntax": "isnumber [<input>]",
+      "category": "Math"
+    },
+    {
+      "name": "isprocessfocused",
+      "syntax": "isprocessfocused [<process ID>/<process name>]",
+      "category": "Process"
+    },
+    {
+      "name": "isprocessrunning",
+      "syntax": "isprocessrunning [<process ID>/<process name>]",
+      "category": "Process"
+    },
+    {
+      "name": "key",
+      "syntax": "key [up/down/stroke] [<key>(,?)] (<stroke duration>) (key separation delay)",
+      "category": "InputSimulation"
+    },
+    {
+      "name": "keystate",
+      "syntax": "keystate [<key>]",
+      "category": "InputSimulation"
+    },
+    {
+      "name": "killprocess",
+      "syntax": "killprocess [<process ID>]",
+      "category": "Process"
+    },
+    {
+      "name": "log",
+      "syntax": "log [<text>] (<file path>)",
+      "category": "File"
+    },
+    {
+      "name": "lowercase",
+      "syntax": "lowercase [<text>]",
+      "category": "String"
+    },
+    {
+      "name": "mapkeys",
+      "syntax": "mapkeys [<map>]",
+      "category": "Collection"
+    },
+    {
+      "name": "mapvalues",
+      "syntax": "mapvalues [<map>]",
+      "category": "Collection"
+    },
+    {
+      "name": "max",
+      "syntax": "max [<#.#>] [<#.#>]",
+      "category": "Math"
+    },
+    {
+      "name": "messagebox",
+      "syntax": "messagebox [<message>] (<title>) (<option>,...)",
+      "category": "UI"
+    },
+    {
+      "name": "midi",
+      "syntax": "midi [<eventType>] (<note number/control number/program/pitchbend value>) (<velocity/control value>) (<should be recorded?>) (<MIDI channel>) (<MIDI devices>)",
+      "category": "MIDI"
+    },
+    {
+      "name": "min",
+      "syntax": "min [<#.#>] [<#.#>]",
+      "category": "Math"
+    },
+    {
+      "name": "mod",
+      "syntax": "mod [<number>] [<modulus>]",
+      "category": "Math"
+    },
+    {
+      "name": "modifieractive",
+      "syntax": "modifieractive [<modifier ID>] [<active?>]",
+      "category": "Modifiers"
+    },
+    {
+      "name": "modifierfolderactive",
+      "syntax": "modifierfolderactive [<modifier folder ID>] [<active?>]",
+      "category": "Modifiers"
+    },
+    {
+      "name": "movefile",
+      "syntax": "movefile [<source file>] [<destination file>] (<overwrite destination?>)",
+      "category": "File"
+    },
+    {
+      "name": "movefolder",
+      "syntax": "movefolder [<source folder>] [<destination path>]",
+      "category": "File"
+    },
+    {
+      "name": "movemouse",
+      "syntax": "movemouse [<x>,<y>]",
+      "category": "InputSimulation"
+    },
+    {
+      "name": "notename",
+      "syntax": "notename [<note number>]",
+      "category": "MIDI"
+    },
+    {
+      "name": "notenumber",
+      "syntax": "notenumber [<note name>]",
+      "category": "MIDI"
+    },
+    {
+      "name": "numberbox",
+      "syntax": "numberbox [<name>] [<description>] (<default value>) (<width>) (<allow decimals?>) (<min value>) (<max value>) (<increment>)",
+      "category": "UI"
+    },
+    {
+      "name": "osc",
+      "syntax": "osc [<address>] (<port>,...) (<argument list>)",
+      "category": "OSC"
+    },
+    {
+      "name": "outputdevices",
+      "syntax": "outputdevices (<selected only?>)",
+      "category": "MIDI"
+    },
+    {
+      "name": "parsedate",
+      "syntax": "parsedate [<date>] (<format>) (UTC?)",
+      "category": "Time"
+    },
+    {
+      "name": "parsejson",
+      "syntax": "parsejson [<string>]",
+      "category": "Collection"
+    },
+    {
+      "name": "platform",
+      "syntax": "platform",
+      "category": "Core"
+    },
+    {
+      "name": "playsound",
+      "syntax": "playsound [<filename>] (<volume>)",
+      "category": "Audio"
+    },
+    {
+      "name": "print",
+      "syntax": "print (<text>)",
+      "category": "Script"
+    },
+    {
+      "name": "processname",
+      "syntax": "processname [<process ID>]",
+      "category": "Process"
+    },
+    {
+      "name": "random",
+      "syntax": "random (<#.#>) (<#.#>) (<round?>)",
+      "category": "Math"
+    },
+    {
+      "name": "repeat",
+      "syntax": "repeat [<#>]",
+      "category": "Logic"
+    },
+    {
+      "name": "replace",
+      "syntax": "replace [<text>] [<to replace>] (<replace with>)",
+      "category": "String"
+    },
+    {
+      "name": "rest",
+      "syntax": "rest [<note value>] (<BPM>) (<PPQ>)",
+      "category": "MIDI"
+    },
+    {
+      "name": "return",
+      "syntax": "return (<value>)",
+      "category": "Script"
+    },
+    {
+      "name": "round",
+      "syntax": "round [<#.#>]",
+      "category": "Math"
+    },
+    {
+      "name": "runscript",
+      "syntax": "runscript (<script name>) (<subscript name>) (<variable_name>:<value>,?) (<await completion?>)",
+      "category": "Script"
+    },
+    {
+      "name": "save",
+      "syntax": "save",
+      "category": "Core"
+    },
+    {
+      "name": "saverecording",
+      "syntax": "saverecording",
+      "category": "MIDI"
+    },
+    {
+      "name": "scriptcontext",
+      "syntax": "scriptcontext",
+      "category": "Script"
+    },
+    {
+      "name": "scroll",
+      "syntax": "scroll (<delta>)",
+      "category": "InputSimulation"
+    },
+    {
+      "name": "searchimage",
+      "syntax": "searchimage [<image file path>] (<max amount of results>) (<bounds X1>,<bounds Y1>,<bounds X2>,<bounds Y2>) (<tolerance>)",
+      "category": "Graphics"
+    },
+    {
+      "name": "searchpixel",
+      "syntax": "searchpixel [R:<#>,G:<#>,B:<#>] (<max amount of results>) (<bounds X1>,<bounds Y1>,<bounds X2>,<bounds Y2>)",
+      "category": "Graphics"
+    },
+    {
+      "name": "selectedtranslationprofile",
+      "syntax": "selectedtranslationprofile [<profile name>]",
+      "category": "Translations"
+    },
+    {
+      "name": "setclipboard",
+      "syntax": "setclipboard [<text>]",
+      "category": "InputSimulation"
+    },
+    {
+      "name": "setfocusedprocess",
+      "syntax": "setfocusedprocess [<process ID>/<process name>]",
+      "category": "Process"
+    },
+    {
+      "name": "setmute",
+      "syntax": "setmute [<mute?>] (<process ID>/<process name>) (audio device)",
+      "category": "Audio"
+    },
+    {
+      "name": "setrecordingenabled",
+      "syntax": "setrecordingenabled [true/false]",
+      "category": "MIDI"
+    },
+    {
+      "name": "setrecordingvolume",
+      "syntax": "setrecordingvolume [<volume>]",
+      "category": "MIDI"
+    },
+    {
+      "name": "setvolume",
+      "syntax": "setvolume [<volume>] (<process ID>/<process name>) (<audio device>)",
+      "category": "Audio"
+    },
+    {
+      "name": "sin",
+      "syntax": "sin [<#.#>]",
+      "category": "Math"
+    },
+    {
+      "name": "sort",
+      "syntax": "sort [<list>]",
+      "category": "Collection"
+    },
+    {
+      "name": "specialfolder",
+      "syntax": "specialfolder [<folder name>]",
+      "category": "File"
+    },
+    {
+      "name": "split",
+      "syntax": "split [<text>] (<spliting string>)",
+      "category": "Collection"
+    },
+    {
+      "name": "startprocess",
+      "syntax": "startprocess [<path/URL>] (<startup arguments>) (<wait for exit?>)",
+      "category": "Process"
+    },
+    {
+      "name": "startswith",
+      "syntax": "startswith [<start>] [<full string>]",
+      "category": "String"
+    },
+    {
+      "name": "stopsound",
+      "syntax": "stopsound [<sound ID>]",
+      "category": "Audio"
+    },
+    {
+      "name": "switch",
+      "syntax": "switch [<value>]",
+      "category": "Logic"
+    },
+    {
+      "name": "sysex",
+      "syntax": "sysex [<hex values>] [<MIDI devices>]",
+      "category": "MIDI"
+    },
+    {
+      "name": "tan",
+      "syntax": "tan [<#.#>]",
+      "category": "Math"
+    },
+    {
+      "name": "textblock",
+      "syntax": "textblock [<text>] [<description>]",
+      "category": "UI"
+    },
+    {
+      "name": "textbox",
+      "syntax": "textbox [<name>] [<description>] (<default value>) (<width>)",
+      "category": "UI"
+    },
+    {
+      "name": "time",
+      "syntax": "time",
+      "category": "Time"
+    },
+    {
+      "name": "titlecase",
+      "syntax": "titlecase [<text>]",
+      "category": "String"
+    },
+    {
+      "name": "tojson",
+      "syntax": "tojson [<map>/<list>]",
+      "category": "Core"
+    },
+    {
+      "name": "translationactive",
+      "syntax": "translationactive [<translation ID>] [<active?>]",
+      "category": "Translations"
+    },
+    {
+      "name": "translationfolderactive",
+      "syntax": "translationfolderactive [<translation folder ID>] [<active?>]",
+      "category": "Translations"
+    },
+    {
+      "name": "translationparameter",
+      "syntax": "translationparameter [<id>] [<control>] (<subscript>)",
+      "category": "Translations"
+    },
+    {
+      "name": "trim",
+      "syntax": "trim [<string>]",
+      "category": "String"
+    },
+    {
+      "name": "uppercase",
+      "syntax": "uppercase [<text>]",
+      "category": "String"
+    },
+    {
+      "name": "wait",
+      "syntax": "wait (<#.#>)",
+      "category": "Script"
+    },
+    {
+      "name": "web",
+      "syntax": "web [GET/POST/PUT/DELETE] [<web address>] (<data>) (<header_key>:<header_value>,...)",
+      "category": "Web"
+    },
+    {
+      "name": "while",
+      "syntax": "while [<value>] (<operator>) (<value>) (&&/||) (?)",
+      "category": "Logic"
+    },
+    {
+      "name": "write",
+      "syntax": "write [<text>] (<speed>)",
+      "category": "InputSimulation"
+    },
+    {
+      "name": "writefile",
+      "syntax": "writefile [<text>] [<target file>] (<overwrite file?>)",
+      "category": "File"
+    }
+  ],
+  "events": [
+    {
+      "name": "configchanged",
+      "syntax": "configchanged",
+      "category": "General"
+    },
+    {
+      "name": "key",
+      "syntax": "key (up/down) (<key>)",
+      "category": "General"
+    },
+    {
+      "name": "midi",
+      "syntax": "midi (<eventType>) (<note number/control channel/program/pitchbend value>) (<velocity/control value/aftertouch value>) (channel)",
+      "category": "General"
+    },
+    {
+      "name": "osc",
+      "syntax": "osc (<port>) (<address>)",
+      "category": "General"
+    },
+    {
+      "name": "process",
+      "syntax": "process (start/stop) (<process name>)",
+      "category": "General"
+    },
+    {
+      "name": "scriptsloaded",
+      "syntax": "scriptsloaded",
+      "category": "General"
+    },
+    {
+      "name": "shutdown",
+      "syntax": "shutdown",
+      "category": "General"
+    },
+    {
+      "name": "startup",
+      "syntax": "startup",
+      "category": "General"
+    },
+    {
+      "name": "sysex",
+      "syntax": "sysex (<device name>)",
+      "category": "General"
+    },
+    {
+      "name": "time",
+      "syntax": "time (hourly/minutely/secondly/at) (<hour>) (<minute>)",
+      "category": "General"
+    },
+    {
+      "name": "uirefreshed",
+      "syntax": "uirefreshed",
+      "category": "General"
+    },
+    {
+      "name": "uri",
+      "syntax": "uri (<host>)",
+      "category": "General"
+    },
+    {
+      "name": "windowchanged",
+      "syntax": "windowchanged (<new window process name>)",
+      "category": "General"
+    },
+    {
+      "name": "windowssession",
+      "syntax": "windowssession (lock/unlock)",
+      "category": "General"
+    }
+  ]
+}
